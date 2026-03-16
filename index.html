@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業個人檔案 | LinkedIn Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --linkedin-blue: #0a66c2;
+            --linkedin-dark-blue: #004182;
+            --bg-gray: #f3f2ef;
+            --text-main: rgba(0, 0, 0, 0.9);
+            --text-sub: rgba(0, 0, 0, 0.6);
+            --border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+
+        /* 卡片通用樣式 */
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        /* 頂部 Header 區塊 */
+        .header-banner {
+            height: 160px;
+            background: linear-gradient(to right, #a0b4b7, #dbe7e9);
+        }
+
+        .profile-pic-container {
+            padding: 0 24px;
+            margin-top: -100px;
+        }
+
+        .profile-pic {
+            width: 152px;
+            height: 152px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            background: #eee;
+            object-fit: cover;
+        }
+
+        .intro-section h1 {
+            font-size: 24px;
+            margin-top: 12px;
+        }
+
+        .headline {
+            font-size: 16px;
+            color: var(--text-main);
+            margin: 4px 0;
+        }
+
+        .location {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 12px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--linkedin-blue);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--linkedin-dark-blue);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--linkedin-blue);
+            border: 1px solid var(--linkedin-blue);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(10, 102, 194, 0.1);
+            border-width: 2px;
+        }
+
+        /* 區塊標題 */
+        h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* 經歷列表樣式 */
+        .exp-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .exp-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .company-logo {
+            width: 48px;
+            height: 48px;
+            background: #eee;
+        }
+
+        .exp-info h3 {
+            font-size: 16px;
+        }
+
+        .exp-info .subtitle {
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .exp-info .date-loc {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* 技能標籤 */
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .skill-item {
+            font-weight: 600;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 600px) {
+            .header-banner { height: 100px; }
+            .profile-pic { width: 120px; height: 120px; }
+            .profile-pic-container { margin-top: -60px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="header-banner"></div>
+        <div class="profile-pic-container">
+            <img src="images/1.png" alt="Profile Picture" class="profile-pic">
+        </div>
+        <div class="card-content intro-section">
+            <h1>你的姓名</h1>
+            <p class="headline">當前職稱 | 核心技能標籤 (例如：數位轉型顧問 / AI 視覺設計師)</p>
+            <p class="location">台灣，台北市 • <a href="#" style="color:var(--linkedin-blue); font-weight:600; text-decoration:none;">聯絡資料</a></p>
+            
+            <div class="action-buttons">
+                <a href="mailto:yourname@example.com" class="btn btn-primary">我有興趣</a>
+                <a href="#projects" class="btn btn-outline">查看作品</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>關於</h2>
+            <p style="font-size: 14px; color: var(--text-main);">
+                在這裡寫下你的專業總結。建議包含：你是誰、你解決什麼問題、以及你具備什麼獨特的價值。
+                <br><br>
+                例如：「擁有 5 年以上跨國專案管理經驗，擅長利用數據驅動決策，曾協助企業提升 30% 運營效率。目前專注於...」
+            </p>
+        </div>
+    </div>
+
+    <div class="card" id="experience">
+        <div class="card-content">
+            <h2>工作經歷</h2>
+            
+            <div class="exp-item">
+                <div class="company-logo"></div>
+                <div class="exp-info">
+                    <h3>資深產品經理</h3>
+                    <p class="subtitle">某某科技股份有限公司 · 全職</p>
+                    <p class="date-loc">2022 年 1 月 - 至今 · 4 年 3 個月</p>
+                    <p style="font-size: 14px; margin-top: 8px;">
+                        • 負責核心產品線的開發與維護。<br>
+                        • 帶領 10 人技術團隊，完成 3 次大型版本更迭。
+                    </p>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="company-logo"></div>
+                <div class="exp-info">
+                    <h3>行銷企劃專員</h3>
+                    <p class="subtitle">創意工作室</p>
+                    <p class="date-loc">2020 年 5 月 - 2021 年 12 月 · 1 年 8 個月</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>專業技能</h2>
+            <div class="skills-list">
+                <div class="skill-item">專案管理 (Project Management)</div>
+                <div class="skill-item">數據分析 (Data Analytics)</div>
+                <div class="skill-item">跨團隊溝通 (Cross-functional Team Leadership)</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
