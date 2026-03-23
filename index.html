@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunny Chao | 專業個人檔案</title>
+    <title>專業個人檔案 | LinkedIn Style</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -35,6 +35,7 @@
             padding: 0 10px;
         }
 
+        /* 卡片通用樣式 */
         .card {
             background: #fff;
             border-radius: 8px;
@@ -48,6 +49,7 @@
             padding: 24px;
         }
 
+        /* 頂部 Header 區塊 */
         .header-banner {
             height: 160px;
             background: linear-gradient(to right, #a0b4b7, #dbe7e9);
@@ -70,7 +72,6 @@
         .intro-section h1 {
             font-size: 24px;
             margin-top: 12px;
-            text-transform: capitalize;
         }
 
         .headline {
@@ -98,7 +99,6 @@
             cursor: pointer;
             text-decoration: none;
             transition: 0.2s;
-            display: inline-block;
         }
 
         .btn-primary {
@@ -119,13 +119,16 @@
 
         .btn-outline:hover {
             background-color: rgba(10, 102, 194, 0.1);
+            border-width: 2px;
         }
 
+        /* 區塊標題 */
         h2 {
             font-size: 20px;
             margin-bottom: 12px;
         }
 
+        /* 經歷列表樣式 */
         .exp-item {
             display: flex;
             gap: 12px;
@@ -143,12 +146,6 @@
             width: 48px;
             height: 48px;
             background: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #999;
-            border-radius: 4px;
         }
 
         .exp-info h3 {
@@ -165,20 +162,17 @@
             color: var(--text-sub);
         }
 
+        /* 技能標籤 */
         .skills-list {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .skill-tag {
-            background: transparent;
-            border: 1px solid var(--text-sub);
-            color: var(--text-sub);
-            padding: 4px 12px;
-            border-radius: 16px;
-            font-size: 14px;
-            font-weight: 500;
+        .skill-item {
+            font-weight: 600;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
         }
 
         @media (max-width: 600px) {
@@ -194,16 +188,16 @@
     <div class="card">
         <div class="header-banner"></div>
         <div class="profile-pic-container">
-            <img src="1.jpg" alt="Sunny Chao" class="profile-pic">
+            <img src="images/1.jpg" alt="Profile Picture" class="profile-pic">
         </div>
         <div class="card-content intro-section">
-            <h1>Sunny Chao</h1>
-            <p class="headline">AI 視覺設計師 | 品牌識別與 3D 造型專家 | 數位藝術指導</p>
-            <p class="location">台灣，新北市 • <a href="mailto:sunny.chao@example.com" style="color:var(--linkedin-blue); font-weight:600; text-decoration:none;">聯絡資料</a></p>
+            <h1>sunny chao</h1>
+            <p class="headline">當前職稱 | 核心技能標籤 (例如：數位轉型顧問 / AI 視覺設計師)</p>
+            <p class="location">台灣，台北市 • <a href="#" style="color:var(--linkedin-blue); font-weight:600; text-decoration:none;">聯絡資料</a></p>
             
             <div class="action-buttons">
-                <a href="mailto:sunny.chao@example.com" class="btn btn-primary">聯絡合作</a>
-                <a href="#projects" class="btn btn-outline">作品展示</a>
+                <a href="mailto:yourname@example.com" class="btn btn-primary">我有興趣</a>
+                <a href="#projects" class="btn btn-outline">查看作品</a>
             </div>
         </div>
     </div>
@@ -211,41 +205,37 @@
     <div class="card">
         <div class="card-content">
             <h2>關於</h2>
-            <p style="font-size: 14px; color: var(--text-main); white-space: pre-line;">
-                我是一位充滿熱情的視覺創作者，擅長利用 AI 技術結合美學指導，創造出具備故事張力的影像。
-                
-                我的專長涵蓋了從寫實的電影場景設計到細膩的角色風格設定。我致力於透過創新的數位工具，將品牌理念轉化為獨特的視覺標誌與 3D 立體設計。
+            <p style="font-size: 14px; color: var(--text-main);">
+                在這裡寫下你的專業總結。建議包含：你是誰、你解決什麼問題、以及你具備什麼獨特的價值。
+                <br><br>
+                例如：「擁有 5 年以上跨國專案管理經驗，擅長利用數據驅動決策，曾協助企業提升 30% 運營效率。目前專注於...」
             </p>
         </div>
     </div>
 
     <div class="card" id="experience">
         <div class="card-content">
-            <h2>核心經歷與專案</h2>
+            <h2>工作經歷</h2>
             
             <div class="exp-item">
-                <div class="company-logo">AI</div>
+                <div class="company-logo"></div>
                 <div class="exp-info">
-                    <h3>AI 視覺創作指導</h3>
-                    <p class="subtitle">自由接案</p>
-                    <p class="date-loc">2025 年 12 月 - 至今</p>
+                    <h3>資深產品經理</h3>
+                    <p class="subtitle">某某科技股份有限公司 · 全職</p>
+                    <p class="date-loc">2022 年 1 月 - 至今 · 4 年 3 個月</p>
                     <p style="font-size: 14px; margin-top: 8px;">
-                        • 運用生成式 AI 進行跨風格角色開發（商務、潮流、派對風）。<br>
-                        • 策劃電影感（Cinematic）場景建構與氛圍渲染。
+                        • 負責核心產品線的開發與維護。<br>
+                        • 帶領 10 人技術團隊，完成 3 次大型版本更迭。
                     </p>
                 </div>
             </div>
 
             <div class="exp-item">
-                <div class="company-logo">ID</div>
+                <div class="company-logo"></div>
                 <div class="exp-info">
-                    <h3>品牌識別設計專案</h3>
-                    <p class="subtitle">個人品牌開發</p>
-                    <p class="date-loc">2026 年 1 月</p>
-                    <p style="font-size: 14px; margin-top: 8px;">
-                        • 設計 J & K 品牌立體標誌與 3D 造型獎盃。<br>
-                        • 專注於流暢線條與幾何美學的結合。
-                    </p>
+                    <h3>行銷企劃專員</h3>
+                    <p class="subtitle">創意工作室</p>
+                    <p class="date-loc">2020 年 5 月 - 2021 年 12 月 · 1 年 8 個月</p>
                 </div>
             </div>
         </div>
@@ -255,11 +245,9 @@
         <div class="card-content">
             <h2>專業技能</h2>
             <div class="skills-list">
-                <span class="skill-tag">AI 影像生成 (Midjourney/Stable Diffusion)</span>
-                <span class="skill-tag">視覺美學指導 (Art Direction)</span>
-                <span class="skill-tag">品牌識別設計 (Branding)</span>
-                <span class="skill-tag">場景敘事與氛圍營造</span>
-                <span class="skill-tag">前端基礎 (HTML/CSS)</span>
+                <div class="skill-item">專案管理 (Project Management)</div>
+                <div class="skill-item">數據分析 (Data Analytics)</div>
+                <div class="skill-item">跨團隊溝通 (Cross-functional Team Leadership)</div>
             </div>
         </div>
     </div>
