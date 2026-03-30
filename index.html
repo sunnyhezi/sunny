@@ -15,11 +15,7 @@
             --border-color: rgba(0, 0, 0, 0.08);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Noto Sans TC', -apple-system, system-ui, sans-serif;
@@ -29,11 +25,7 @@
             padding-bottom: 50px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 10px;
-        }
+        .container { max-width: 800px; margin: 20px auto; padding: 0 10px; }
 
         .card {
             background: #fff;
@@ -41,55 +33,30 @@
             border: 1px solid var(--border-color);
             margin-bottom: 12px;
             overflow: hidden;
-            position: relative;
         }
 
-        .card-content {
-            padding: 24px;
-        }
+        .card-content { padding: 24px; }
 
         .header-banner {
             height: 160px;
-            background: linear-gradient(to right, #a0b4b7, #dbe7e9);
+            background: linear-gradient(to right, #6a85b6, #bac8e0);
         }
 
-        .profile-pic-container {
-            padding: 0 24px;
-            margin-top: -100px;
-        }
+        .profile-pic-container { padding: 0 24px; margin-top: -100px; }
 
         .profile-pic {
-            width: 152px;
-            height: 152px;
+            width: 152px; height: 152px;
             border-radius: 50%;
             border: 4px solid #fff;
             background: #eee;
             object-fit: cover;
         }
 
-        .intro-section h1 {
-            font-size: 24px;
-            margin-top: 12px;
-            text-transform: capitalize;
-        }
+        .intro-section h1 { font-size: 24px; margin-top: 12px; }
+        .headline { font-size: 16px; color: var(--text-main); margin: 4px 0; }
+        .location { font-size: 14px; color: var(--text-sub); margin-bottom: 12px; }
 
-        .headline {
-            font-size: 16px;
-            color: var(--text-main);
-            margin: 4px 0;
-        }
-
-        .location {
-            font-size: 14px;
-            color: var(--text-sub);
-            margin-bottom: 12px;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 8px;
-            margin-top: 16px;
-        }
+        .action-buttons { display: flex; gap: 8px; margin-top: 16px; }
 
         .btn {
             padding: 6px 16px;
@@ -101,42 +68,31 @@
             display: inline-block;
         }
 
-        .btn-primary {
-            background-color: var(--linkedin-blue);
-            color: white;
-            border: none;
-        }
+        .btn-primary { background-color: var(--linkedin-blue); color: white; border: none; }
+        .btn-primary:hover { background-color: var(--linkedin-dark-blue); }
+        .btn-outline { background-color: transparent; color: var(--linkedin-blue); border: 1px solid var(--linkedin-blue); }
 
-        .btn-primary:hover {
-            background-color: var(--linkedin-dark-blue);
-        }
+        h2 { font-size: 20px; margin-bottom: 16px; }
 
-        .btn-outline {
-            background-color: transparent;
-            color: var(--linkedin-blue);
-            border: 1px solid var(--linkedin-blue);
-        }
-
-        .btn-outline:hover {
-            background-color: rgba(10, 102, 194, 0.1);
-        }
-
-        h2 {
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .skills-list {
+        /* 學歷樣式 */
+        .edu-item { display: flex; gap: 12px; }
+        .school-logo {
+            width: 48px; height: 48px;
+            background: #f0f0f0;
+            border-radius: 4px;
             display: flex;
-            flex-direction: column;
-            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+            flex-shrink: 0;
         }
 
-        .skill-item {
-            font-weight: 600;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border-color);
-        }
+        .edu-info h3 { font-size: 16px; }
+        .edu-info p { font-size: 14px; color: var(--text-sub); }
+
+        .skills-list { display: flex; flex-direction: column; gap: 12px; }
+        .skill-item { font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid var(--border-color); }
 
         @media (max-width: 600px) {
             .header-banner { height: 100px; }
@@ -156,14 +112,14 @@
         </div>
         <div class="card-content intro-section">
             <h1>sunny chao</h1>
-            <p class="headline">國際級廣告大師 | AI 視覺設計 | 創意企劃</p>
+            <p class="headline">黎明技術學院 數位多媒體系 | AI 視覺設計師 | 國際廣告創意</p>
             <p class="location">
                 243新北市泰山區泰林路三段22號 • 
                 <a href="mailto:zhaochuixian@gmail.com" style="color:var(--linkedin-blue); font-weight:600; text-decoration:none;">聯絡資料</a>
             </p>
             
             <div class="action-buttons">
-                <a href="mailto:zhaochuixian@gmail.com" class="btn btn-primary">我有興趣 (Email)</a>
+                <a href="mailto:zhaochuixian@gmail.com" class="btn btn-primary">與我聯繫 (Email)</a>
                 <a href="tel:0970126329" class="btn btn-outline">撥打電話 0970-126-329</a>
             </div>
         </div>
@@ -172,9 +128,25 @@
     <div class="card">
         <div class="card-content">
             <h2>關於</h2>
-            <p style="font-size: 14px; color: var(--text-main);">
-                我是 Sunny Chao，一名專注於國際廣告視覺設計的創意人。擅長將 AI 技術應用於影像編輯與分鏡腳本創作，並擁有 TOCFL B1 語言認證，具備優異的跨國溝通與視覺敘事能力。
+            <p style="font-size: 14px; color: var(--text-main); line-height: 1.6;">
+                我是 Sunny Chao，目前就讀於<b>黎明技術學院數位多媒體系二年級</b>。我熱衷於將數位多媒體技術與現代 AI 視覺設計相結合，擅長運用 AI 進行高效的影像編輯、風格轉化與廣告分鏡腳本創作。
+                <br><br>
+                在學期間，我致力於探索多媒體敘事的新邊界，結合我在國際廣告視野上的追求與技術實作，力求在無需言語的視覺節奏中傳達最強大的品牌訊息。我擁有 TOCFL B1 認證，具備良好的跨文化溝通基礎。
             </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>學歷</h2>
+            <div class="edu-item">
+                <div class="school-logo">LIT</div>
+                <div class="edu-info">
+                    <h3>黎明技術學院 (Lee-Ming Institute of Technology)</h3>
+                    <p>數位多媒體系 · 學士學位</p>
+                    <p>2024 年 - 至今 (預計 2028 年畢業)</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -182,10 +154,10 @@
         <div class="card-content">
             <h2>專業技能與語言</h2>
             <div class="skills-list">
+                <div class="skill-item">多媒體影像創作 (Multimedia Content Creation)</div>
+                <div class="skill-item">AI 視覺設計與編輯 (AI Generative Art & Editing)</div>
+                <div class="skill-item">數位廣告分鏡腳本 (Digital Storyboarding)</div>
                 <div class="skill-item">華語文能力測驗 (TOCFL B1)</div>
-                <div class="skill-item">AI 視覺設計 (AI Visual Design & Editing)</div>
-                <div class="skill-item">廣告分鏡腳本 (Advertising Storyboarding)</div>
-                <div class="skill-item">跨團隊溝通 (Cross-functional Leadership)</div>
             </div>
         </div>
     </div>
